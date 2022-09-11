@@ -58,8 +58,6 @@ def main():
     input_id = input("아이디를 입력해주세요 : ")
     input_pw = input("비밀번호를 입력해주세요 : ")
     input_delay = input("작성 간격을(분) 입력해주세요 ex) 10 : ")
-    input_id = "daum_Id"
-    input_pw = "daum_Pw" 
     try:
       sched.add_job(job, 'cron', hour=input_hour, minute=input_minute, id='communityPostD',args=[input_id,input_pw,input_delay],misfire_grace_time=600)
     except:
